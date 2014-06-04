@@ -1,0 +1,6 @@
+name 'simply-stunnel'
+maintainer 'Ace of Sales'
+maintainer_email 'cookbooks@aceofsales.com'
+license 'Apache 2.0'
+description 'Installs/Configures stunnel'
+version '1.0.0'

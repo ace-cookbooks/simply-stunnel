@@ -1,0 +1,18 @@
+; global
+<% @stunnel[:global].each do |option,ary| -%>
+<% ary = [ary].flatten -%>
+<% ary.each do |v| -%>
+<%= "#{option} = #{v}" %>
+<% end -%>
+<% end -%>
+
+; services
+<% @stunnel[:services].each do |name, config| -%>
+<%= "[#{name}]" %>
+<% config.each do |option,ary| -%>
+<% ary = [ary].flatten -%>
+<% ary.each do |v| -%>
+<%= "#{option} = #{v}" %>
+<% end -%>
+<% end -%>
+<% end -%>
