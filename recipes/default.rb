@@ -2,6 +2,13 @@ node[:stunnel][:packages].each do |s_pkg|
   package s_pkg
 end
 
+directory '/etc/stunnel' do
+  owner 'root'
+  group 'root'
+  mode 00755
+  action :create
+end
+
 user node[:stunnel][:user] do
   home '/etc/stunnel'
   system true
